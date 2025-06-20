@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contáctanos - Delicias Express - Hermosillo</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body>
+	<header>
+		<h1>Delicias Express - Hermosillo</h1>
+		<p>¡Tu sabor favorito, entregado rápidamente!</p>
+	</header>
+
+	<nav>
+		<a href="index.html">Inicio</a><br>
+		<a href="quieness.html">Quiénes Somos</a><br>
+		<a href="clientes.html">Registro de Clientes</a><br>
+		<a href="ventas.html">Registro de Ventas</a><br>
+		<a href="catalogo.php">Nuestro Catálogo</a><br>
+		<a href="contactanos.html">Contáctanos</a><br>
+		<a href="programadores.html">Programadores</a><br>
+	</nav>
+
+	<main>
+		<section class="fondo">
+			<h2>Contáctanos</h2>
+			<p>¿Tienes alguna pregunta, sugerencia o comentario sobre tu experiencia en Delicias Express - Hermosillo? ¡Nos encantaría escucharte!</p>
+
+			<form action="enviar_mensaje_contacto.php" method="POST">
+				<fieldset>
+					<legend>Envíanos un Mensaje</legend>
+
+					<label for="nombre_completo">Tu Nombre:</label><br>
+					<input type="text" id="nombre_completo" name="nombre" placeholder="Ej: Juan Pérez" required><br><br> <label for="email">Tu Email:</label><br>
+					<input type="email" id="email" name="email" placeholder="Ej: tu_correo@ejemplo.com" required><br><br>
+
+					<label for="asunto">Asunto:</label><br>
+					<input type="text" id="asunto" name="asunto" placeholder="Ej: Sugerencia sobre el menú" required><br><br>
+
+					<label for="mensaje">Tu Mensaje:</label><br>
+					<textarea id="mensaje" name="mensaje" rows="5" cols="50" placeholder="Escribe aquí tu consulta o comentario..." required></textarea><br><br>
+					
+					<input type="submit" value="Enviar Mensaje">
+					<input type="reset" value="Limpiar Formulario">
+				</fieldset>
+			</form>
+
+			<h3>Nuestra Información de Contacto:</h3>
+			<p><strong>Dirección:</strong> Bvld. Solidaridad #123, Col. Centro, Hermosillo, Sonora</p>
+			<p><strong>Teléfono:</strong> (662) 123-4567</p>
+			<p><strong>Horario:</strong> Lunes a Domingo: 7:00 AM - 1:00 AM</p>
+			<p>Síguenos en nuestras redes sociales para no perderte nuestras promociones y novedades.</p>
+      </section>
+	</main>
+
+	<footer>
+		<p>&copy;2025 Delicias Express - Hermosillo - Todos los derechos reservados.</p>
+		<p>Maestra Alondra Zavala - 2025</p>
+		<p>4A Programación - Mario Antonio Cárdenas López</p>
+	</footer>
+
+</body>
+</html>

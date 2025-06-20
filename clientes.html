@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registro de Clientes - Delicias Express - Hermosillo</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body>
+	<header>
+		<h1>Delicias Express - Hermosillo</h1>
+		<p>¡Tu sabor favorito, entregado rápidamente!</p>
+	</header>
+
+	<nav>
+		<a href="index.html">Inicio</a><br>
+		<a href="quieness.html">Quiénes Somos</a><br>
+		<a href="clientes.html">Registro de Clientes</a><br>
+		<a href="ventas.html">Registro de Ventas</a><br>
+		<a href="catalogo.php">Nuestro Catálogo</a><br>
+		<a href="contactanos.html">Contáctanos</a><br>
+		<a href="programadores.html">Programadores</a><br>
+	</nav>
+
+	<main>
+		<section class="fondo">
+			<h2>Registro de Clientes</h2>
+			<p>Únete a la familia Delicias Express y sé el primero en recibir ofertas especiales y nuestras últimas novedades.</p>
+
+			<form action="guardar_cliente.php" method="POST">
+				<fieldset>
+					<legend>Datos del Cliente</legend>
+
+					<label for="nombre">Nombre:</label><br>
+					<input type="text" id="nombre" name="nombre" placeholder="Ej: Mario" required><br><br>
+
+					<label for="apellido">Apellido:</label><br>
+					<input type="text" id="apellido" name="apellido" placeholder="Ej: Cárdenas" required><br><br>
+
+					<label for="email">Email:</label><br>
+					<input type="email" id="email" name="email" placeholder="Ej: correo@ejemplo.com"><br><br>
+
+					<label for="telefono">Teléfono:</label><br>
+					<input type="tel" id="telefono" name="telefono" placeholder="Ej: 6621234567"><br><br>
+
+					<label for="direccion">Dirección (Opcional, para futuros pedidos a domicilio):</label><br>
+					<textarea id="direccion" name="direccion" rows="3" cols="50" placeholder="Ej: Calle Falsa 123, Col. Centro"></textarea><br><br>
+					
+					<input type="submit" value="Registrar Cliente">
+					<input type="reset" value="Limpiar Formulario">
+				</fieldset>
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy;2025 Delicias Express - Hermosillo - Todos los derechos reservados.</p>
+		<p>Maestra Alondra Zavala - 2025</p>
+		<p>4A Programación - Mario Antonio Cárdenas López</p>
+	</footer>
+
+</body>
+</html>

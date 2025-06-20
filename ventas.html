@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registro de Ventas - Delicias Express - Hermosillo</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body>
+	<header>
+		<h1>Delicias Express - Hermosillo</h1>
+		<p>¡Tu sabor favorito, entregado rápidamente!</p>
+	</header>
+
+	<nav>
+		<a href="index.html">Inicio</a><br>
+		<a href="quieness.html">Quiénes Somos</a><br>
+		<a href="clientes.html">Registro de Clientes</a><br>
+		<a href="ventas.html">Registro de Ventas</a><br>
+		<a href="catalogo.php">Nuestro Catálogo</a><br>
+		<a href="contactanos.html">Contáctanos</a><br>
+		<a href="programadores.html">Programadores</a><br>
+	</nav>
+
+	<main>
+		<section class="fondo">
+			<h2>Registro de Ventas</h2>
+			<p>Utilice este formulario para registrar una transacción de venta de Delicias Express.</p>
+
+			<form action="guardar_venta.php" method="POST">
+				<fieldset>
+					<legend>Detalles de la Venta</legend>
+
+					<label for="fecha_venta">Fecha de Venta:</label><br>
+					<input type="date" id="fecha_venta" name="fecha_venta" value="2025-06-11" required><br><br>
+
+					<label for="id_cliente">ID del Cliente (Opcional):</label><br>
+					<input type="number" id="id_cliente" name="id_cliente" placeholder="ID del cliente registrado. Ej: 1"><br><br>
+
+					<label for="id_producto">ID del Producto (Menú):</label><br>
+					<input type="number" id="id_producto" name="id_producto" placeholder="ID del producto vendido. Ej: 1" required><br><br>
+
+					<label for="cantidad">Cantidad:</label><br>
+					<input type="number" id="cantidad" name="cantidad" min="1" value="1" required><br><br>
+
+					<label for="precio_unitario">Precio Unitario ($):</label><br>
+					<input type="number" id="precio_unitario" name="precio_unitario" step="0.01" min="0" required><br><br>
+
+					<label for="total_venta">Total de la Venta ($):</label><br>
+					<input type="number" id="total_venta" name="total_venta" step="0.01" min="0" readonly><br><br>
+
+					<label for="metodo_pago">Método de Pago:</label><br>
+					<select id="metodo_pago" name="metodo_pago">
+						<option value="efectivo">Efectivo</option>
+						<option value="tarjeta_credito">Tarjeta de Crédito</option>
+						<option value="tarjeta_debito">Tarjeta de Débito</option>
+						<option value="app_movil">App Móvil (Propia de la Tienda)</option>
+					</select><br><br>
+
+					<label for="observaciones">Observaciones:</label><br>
+					<textarea id="observaciones" name="observaciones" rows="3" cols="50" placeholder="Ej: Pedido para llevar, extra salsa."></textarea><br><br>
+
+					<input type="submit" value="Registrar Venta">
+					<input type="reset" value="Limpiar Formulario">
+				</fieldset>
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy;2025 Delicias Express - Hermosillo - Todos los derechos reservados.</p>
+		<p>Maestra Alondra Zavala - 2025</p>
+		<p>4A Programación - Mario Antonio Cárdenas López</p>
+	</footer>
+
+    <script>
+        function calcularTotal() {
+            const cantidad = parseFloat(document.getElementById('cantidad').value);
+            const precioUnitario = parseFloat(document.getElementById('precio_unitario').value);
+            let total = 0;
+            if (!isNaN(cantidad) && !isNaN(precioUnitario)) {
+                total = cantidad * precioUnitario;
+            }
+            
+            document.getElementById('total_venta').value = total.toFixed(2); 
+        }
+
+        document.getElementById('cantidad').addEventListener('input', calcularTotal);
+        document.getElementById('precio_unitario').addEventListener('input', calcularTotal);
+        document.addEventListener('DOMContentLoaded', calcularTotal);
+    </script>
+
+</body>
+</html>
